@@ -1,54 +1,33 @@
 package com.shellucas.casinoapi.cards;
 
-import java.util.Objects;
-
 /**
  *
  * @author shelby
  */
-public class Card {
+public interface Card {
+   
+    /**
+     * Get the rank of this card as defined in the Ranks enum.
+     * 
+     * @return rank of card
+     */
+    public Ranks getRANK();
     
-    private final Ranks RANK;
-    private final Suits SUIT;
-
-    public Card(Suits SUIT, Ranks RANK) {
-        this.SUIT = SUIT;
-        this.RANK = RANK;
-    }
-
-    public Ranks getRANK() {
-        return this.RANK;
-    }
+    /**
+     * Get the suit of this card as defined in the Suits enum.
+     * 
+     * @return suit of card
+     */
+    public Suits getSUIT();
     
-    public Suits getSUIT() {
-        return this.SUIT;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 47 * hash + Objects.hashCode(this.RANK);
-        hash = 47 * hash + Objects.hashCode(this.SUIT);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Card other = (Card) obj;
-        return this.RANK == other.RANK && this.SUIT == other.SUIT;
-    }
-
-    @Override
-    public String toString() {
-        return this.RANK + " of " + this.SUIT;
-    }
+    /**
+     * Get the value of this card as an integer representation. This can be for
+     * example a classic 1-13 (as in Ace, 2, 3, 4, 5, 6, 7, 8, 9, 10, Jack, 
+     * Queen, King) or for blackjack the point of rank for base cards, 10 for
+     * face cards and 1 or 11 for Aces, etc.
+     * 
+     * @return The int representation of the value of the card.
+     */
+    public int getValue();
+    
 }
