@@ -1,6 +1,6 @@
 package com.shellucas.casinoapi.cards;
 
-import java.util.List;
+import java.util.Collection;
 
 /**
  *
@@ -22,6 +22,6 @@ public interface CardCollection {
      *
      * @return List of cards
      */
-    public List<Card> getCards();
+    public Collection<Card> getCards();
 
 }

@@ -4,7 +4,7 @@ package com.shellucas.casinoapi.bets;
  *
  * @author shelby
  */
-public class Bet {
+public abstract class Bet {
     
     private final double amount;
 
