@@ -6,6 +6,7 @@
 package com.shellucas.casinoapi.bets.factories;
 
 import com.shellucas.casinoapi.cards.Card;
+import com.shellucas.casinoapi.cards.CardCollection;
 import com.shellucas.casinoapi.cards.Ranks;
 import com.shellucas.casinoapi.cards.Suits;
 
@@ -16,5 +17,7 @@ import com.shellucas.casinoapi.cards.Suits;
 public interface AbstractCardFactory {
     
     public Card getCard(Ranks rank, Suits suit);
+    
+    public CardCollection getCardCollection();
     
 }

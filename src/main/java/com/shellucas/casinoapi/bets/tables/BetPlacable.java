@@ -6,7 +6,7 @@ import com.shellucas.casinoapi.bets.Bet;
  *
  * @author shelby
  */
-public interface BetPlacer {
+public interface BetPlacable {
 
     /**
      * Get the limit of the sum of all bets by a player.

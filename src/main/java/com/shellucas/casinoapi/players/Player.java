@@ -1,23 +1,12 @@
 package com.shellucas.casinoapi.players;
 
 import com.shellucas.casinoapi.bets.Bet;
-import com.shellucas.casinoapi.bets.tables.BetPlacer;
 
 /**
  *
  * @author shelby
  */
-public abstract class Player {
-
-    private double stake;
-    private int roundsToGo;
-    private BetPlacer table;
-
-    public Player(double stake, int roundsToGo, BetPlacer table) {
-        this.stake = stake;
-        this.roundsToGo = roundsToGo;
-        this.table = table;
-    }
+public interface Player {
 
     /**
      * Returns True while the player is active.
@@ -28,8 +17,9 @@ public abstract class Player {
 
     /**
      * Places a bet on the players table.
+     * @param bet
      */
-    public abstract void placeBets();
+    public abstract void placeBets(Bet bet);
 
     /**
      * Updates stake with the result of the won bet. Updates roundsToGo
@@ -46,25 +36,5 @@ public abstract class Player {
      * @param lostBet
      */
     public abstract void lose(Bet lostBet);
-    
-    public int getRoundsToGo() {
-        return roundsToGo;
-    }
-
-    public double getStake() {
-        return stake;
-    }
-
-    public BetPlacer getTable() {
-        return table;
-    }
-
-    public void setStake(double stake) {
-        this.stake = stake;
-    }
-
-    public void setTable(BetPlacer table) {
-        this.table = table;
-    }
 
 }
