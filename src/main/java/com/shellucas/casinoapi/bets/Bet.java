@@ -34,4 +34,10 @@ public interface Bet {
      * @return
      */
     public double price();
+    
+    /**
+     * Returns the outcome of the bet.
+     * @return 
+     */
+    public Outcome getOutcome();
 }

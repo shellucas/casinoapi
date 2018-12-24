@@ -22,6 +22,6 @@ public interface CardCollection {
      *
      * @return List of cards
      */
-    public Collection<Card> getCards();
+    public Collection<? extends Card> getCards();
 
 }

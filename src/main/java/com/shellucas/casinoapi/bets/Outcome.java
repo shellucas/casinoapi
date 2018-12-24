@@ -4,7 +4,7 @@ package com.shellucas.casinoapi.bets;
  *
  * @author shelby
  */
-public interface Outcome {
+public interface Outcome extends Comparable<Outcome> {
     
     /**
      * Multiplies the bet amount by the odds.
