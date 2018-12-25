@@ -29,4 +29,12 @@ public interface BetPlacable {
      */
     public void placeBet(Bet bet);
     
+    /**
+     * Removes a bet from the placement.
+     * 
+     * @param bet
+     * @return 
+     */
+    public Bet removeBet(Bet bet);
+    
 }
